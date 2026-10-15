@@ -1,0 +1,38 @@
+# Packs every skill folder (any directory with a SKILL.md) into <name>.zip and
+# attaches it to the rolling "skills" release, so each skill has a stable link:
+#   https://github.com/peakstargroup/chiuchiu-skills/releases/latest/download/<name>.zip
+name: package-skills
+
+on:
+  push:
+    branches: [main]
+    paths: ["*/SKILL.md", "*/**", ".github/workflows/release.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Zip each skill folder
+        run: |
+          mkdir -p dist
+          for f in */SKILL.md; do
+            d="${f%/SKILL.md}"
+            # zip root is the folder itself, as Claude requires (folder name = skill name)
+            zip -r -X "dist/${d}.zip" "$d" -x "*.DS_Store"
+          done
+          ls -la dist
+
+      - name: Publish to the "skills" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view skills >/dev/null 2>&1; then
+            gh release create skills --title "啾一下 AI 免費 Skills" --notes "每個 skill 的最新版 zip。改了 SKILL.md 會自動重新打包。" --latest
+          fi
+          gh release upload skills dist/*.zip --clobber
