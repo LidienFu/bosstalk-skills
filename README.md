@@ -9,12 +9,16 @@ Skill 就是一個資料夾，裡面一份 SKILL.md 說明書。寫一次，**Cl
 | Skill | 做什麼 | 下載 |
 |---|---|---|
 | [weekly-report](weekly-report/SKILL.md) | 把一週的零散筆記整理成固定格式的週報，沒寫清楚的列在「待確認」 | [weekly-report.zip](https://github.com/peakstargroup/chiuchiu-skills/releases/latest/download/weekly-report.zip) |
+| [reframe-eye](reframe-eye/SKILL.md) | 橫的影片轉直式前，讓 AI 先看每個鏡頭、決定怎麼裁，人臉和字卡不被切掉（搭配 ffmpeg-skill） | [reframe-eye.zip](https://github.com/peakstargroup/chiuchiu-skills/releases/latest/download/reframe-eye.zip) |
+| [reframe-track](reframe-track/SKILL.md) | 裁切框跟著人臉或走動的人移動（選配程式，在你電腦上跑 MediaPipe） | [reframe-track.zip](https://github.com/peakstargroup/chiuchiu-skills/releases/latest/download/reframe-track.zip) |
+
+reframe-eye 和 reframe-track 要在你自己的電腦上處理影片，請在 Claude Code、Cursor 或 Codex 裡使用（Claude Code 解壓到 `~/.claude/skills/`），也要先裝好 [ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)。claude.ai 和 Gemini 網頁版用不了這兩個。
 
 ## 下載之前，先看內容
 
 點上面表格的 skill 名稱，就能直接在網頁上讀完整的 SKILL.md。
 
-網路上別人分享的 skill，裡面可能藏了會執行的程式。Anthropic 官方建議只裝自己做的、或官方提供的 skill，別人的先打開看過再裝。這裡的每個 skill 都只有一份純文字說明書，沒有任何程式，你可以自己檢查。
+網路上別人分享的 skill，裡面可能藏了會執行的程式。Anthropic 官方建議只裝自己做的、或官方提供的 skill，別人的先打開看過再裝。這裡的每個 skill 和選配的程式碼都開源：說明書是純文字，需要程式的 skill 會把程式放在獨立資料夾、寫清楚做什麼，不用也能照說明書使用。下載前都可以在網頁上逐行看過。
 
 ## 放進 Claude
 
