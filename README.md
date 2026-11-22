@@ -8,9 +8,9 @@ Skill 就是一個資料夾，裡面一份 SKILL.md 說明書。寫一次，**Cl
 
 | Skill | 做什麼 | 下載 |
 |---|---|---|
-| [weekly-report](weekly-report/SKILL.md) | 把一週的零散筆記整理成固定格式的週報，沒寫清楚的列在「待確認」 | [weekly-report.zip](https://github.com/LidienFu/chiuchiu-skills/releases/latest/download/weekly-report.zip) |
-| [reframe-eye](reframe-eye/SKILL.md) | 橫的影片轉直式前，讓 AI 先看每個鏡頭、決定怎麼裁，人臉和字卡不被切掉（搭配 ffmpeg-skill） | [reframe-eye.zip](https://github.com/LidienFu/chiuchiu-skills/releases/latest/download/reframe-eye.zip) |
-| [reframe-track](reframe-track/SKILL.md) | 裁切框跟著人臉或走動的人移動（選配程式，在你電腦上跑 MediaPipe） | [reframe-track.zip](https://github.com/LidienFu/chiuchiu-skills/releases/latest/download/reframe-track.zip) |
+| [weekly-report](weekly-report/SKILL.md) | 把一週的零散筆記整理成固定格式的週報，沒寫清楚的列在「待確認」 | [weekly-report.zip](https://github.com/LidienFu/bosstalk-skills/releases/latest/download/weekly-report.zip) |
+| [reframe-eye](reframe-eye/SKILL.md) | 橫的影片轉直式前，讓 AI 先看每個鏡頭、決定怎麼裁，人臉和字卡不被切掉（搭配 ffmpeg-skill） | [reframe-eye.zip](https://github.com/LidienFu/bosstalk-skills/releases/latest/download/reframe-eye.zip) |
+| [reframe-track](reframe-track/SKILL.md) | 裁切框跟著人臉或走動的人移動（選配程式，在你電腦上跑 MediaPipe） | [reframe-track.zip](https://github.com/LidienFu/bosstalk-skills/releases/latest/download/reframe-track.zip) |
 
 reframe-eye 和 reframe-track 要在你自己的電腦上處理影片，請在 Claude Code、Cursor 或 Codex 裡使用（Claude Code 解壓到 `~/.claude/skills/`），也要先裝好 [ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill)。claude.ai 和 Gemini 網頁版用不了這兩個。
 

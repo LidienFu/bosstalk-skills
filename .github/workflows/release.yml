@@ -1,6 +1,6 @@
 # Packs every skill folder (any directory with a SKILL.md) into <name>.zip and
 # attaches it to the rolling "skills" release, so each skill has a stable link:
-#   https://github.com/LidienFu/chiuchiu-skills/releases/latest/download/<name>.zip
+#   https://github.com/LidienFu/bosstalk-skills/releases/latest/download/<name>.zip
 name: package-skills
 
 on:
