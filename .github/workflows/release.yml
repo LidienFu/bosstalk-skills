@@ -1,6 +1,6 @@
 # Packs every skill folder (any directory with a SKILL.md) into <name>.zip and
 # attaches it to the rolling "skills" release, so each skill has a stable link:
-#   https://github.com/peakstargroup/chiuchiu-skills/releases/latest/download/<name>.zip
+#   https://github.com/LidienFu/chiuchiu-skills/releases/latest/download/<name>.zip
 name: package-skills
 
 on:
@@ -33,6 +33,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view skills >/dev/null 2>&1; then
-            gh release create skills --title "啾一下 AI 免費 Skills" --notes "每個 skill 的最新版 zip。改了 SKILL.md 會自動重新打包。" --latest
+            gh release create skills --title "老闆，讓 AI 講人話：免費 Skills" --notes "每個 skill 的最新版 zip。改了 SKILL.md 會自動重新打包。" --latest
           fi
           gh release upload skills dist/*.zip --clobber
